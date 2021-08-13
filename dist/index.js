@@ -116,14 +116,16 @@ peopleInput.addEventListener('change', update => {
   } else {
     peopleInput.parentNode.parentNode.classList.remove("dirty");
   }
+  let errorMessage = peopleInput.parentNode.parentNode.children["personnel header"].children["error_message"];
   if(peopleInput.value == '0'){
     peopleInput.setCustomValidity("Can't be zero")
-    let errorMessage = peopleInput.parentNode.parentNode.children["personnel header"].children["error_message"];
     errorMessage.innerHTML = peopleInput.validationMessage;
     errorMessage.style.display = "block"
     return;
   } else{
     peopleInput.setCustomValidity("")
+    errorMessage.innerHTML = "";
+    errorMessage.style.display = "none"
   }
   if(parseInt(update.target.value)){
     numOfPeople = parseInt(update.target.value);
