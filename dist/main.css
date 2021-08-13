@@ -115,7 +115,7 @@ main {
   z-index: 1;
 }
 .form_field input[type="text"] {
-  color: hsla(184, 19%, 68%, 1);
+  color:var(--clr-neutral-very-dark-cyan);
 }
 .tips {
   display: grid;
