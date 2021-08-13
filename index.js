@@ -61,9 +61,9 @@ function calculate() {
 
 billInput.addEventListener('change', update => {
   if (billInput.value != "") {
-    billInput.classList.add("dirty");
+    billInput.parentNode.parentNode.classList.add("dirty");
   } else {
-    billInput.classList.remove("dirty");
+    billInput.parentNode.parentNode.classList.remove("dirty");
   }
 
   if(parseFloat(update.target.value)){
@@ -87,9 +87,9 @@ for (const button of tipPercentInput) {
 //custom tip value changes -> update 'tip' variable.
 tipPercentCustomInput.addEventListener('change', update => {
   if (tipPercentCustomInput.value != "") {
-    tipPercentCustomInput.classList.add("dirty");
+    tipPercentCustomInput.parentNode.parentNode.classList.add("dirty");
   } else {
-    tipPercentCustomInput.classList.remove("dirty");
+    tipPercentCustomInput.parentNode.parentNode.classList.remove("dirty");
   }
   if(update.target.value.includes('%')){
     let splitString = update.target.value.split('%');
@@ -112,9 +112,9 @@ tipPercentCustomInput.addEventListener('change', update => {
 //number of people changes -> update 'numOfPeople' variable
 peopleInput.addEventListener('change', update => {
   if (peopleInput.value != "") {
-    peopleInput.classList.add("dirty");
+    peopleInput.parentNode.parentNode.classList.add("dirty");
   } else {
-    peopleInput.classList.remove("dirty");
+    peopleInput.parentNode.parentNode.classList.remove("dirty");
   }
   if(peopleInput.value == '0'){
     peopleInput.setCustomValidity("Can't be zero")

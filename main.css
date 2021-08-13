@@ -92,11 +92,11 @@ main {
   font-size: 24px;
 }
 
-.form_field input.dirty:valid {
+.dirty .form_field input:valid {
   background: none;
   border: 2px solid var(--clr-form-valid);
 }
-.form_field input.dirty:invalid {
+.dirty .form_field input:invalid {
   background: none;
   border: 2px solid var(--clr-form-invalid);
 }
@@ -245,21 +245,18 @@ main {
 .bill__header, .tip__header, .personnel__header {
   display: flex;
 }
-.bill__header .error_message, 
-.tip__header .error_message, 
-.personnel__header .error_message {
+.dirty .bill__header .error_message, 
+.dirty .tip__header .error_message, 
+.dirty .personnel__header .error_message {
   box-sizing: border-box;
   display: none;
   margin-left: auto;
-
   font-family: var(--font-ff-space-mono);
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   text-align: right;
-
   color: #B57B6D;
-
 }
 
 
