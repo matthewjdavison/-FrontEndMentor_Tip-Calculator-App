@@ -245,9 +245,9 @@ main {
 .bill__header, .tip__header, .personnel__header {
   display: flex;
 }
-.dirty .bill__header .error_message, 
-.dirty .tip__header .error_message, 
-.dirty .personnel__header .error_message {
+.bill__header .error_message, 
+.tip__header .error_message, 
+.personnel__header .error_message {
   box-sizing: border-box;
   display: none;
   margin-left: auto;
@@ -258,6 +258,7 @@ main {
   text-align: right;
   color: #B57B6D;
 }
+
 
 
 
